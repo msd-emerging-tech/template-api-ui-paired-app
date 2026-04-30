@@ -19,6 +19,8 @@ COPY --from=deps /app/apps/web/node_modules ./apps/web/node_modules
 COPY . .
 
 # Build the web app
+ARG BASE_PATH=""
+ENV BASE_PATH=$BASE_PATH
 ARG CACHEBUST=1
 RUN npm run build
 
