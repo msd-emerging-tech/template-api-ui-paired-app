@@ -1,0 +1,19 @@
+{
+  "name": "template-api-ui-paired-app",
+  "version": "1.0.0",
+  "description": "Monorepo with API and UI for full-stack prototypes",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run dev -w apps/web",
+    "build": "npm run build -w apps/web",
+    "start": "npm run start -w apps/web",
+    "typecheck": "npm run typecheck -ws"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "keywords": ["monorepo", "api", "ui", "fullstack", "template"],
+  "author": "Emerging Tech",
+  "license": "MIT"
+}
