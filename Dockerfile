@@ -19,6 +19,7 @@ COPY --from=deps /app/apps/web/node_modules ./apps/web/node_modules
 COPY . .
 
 # Build the web app
+ARG CACHEBUST=1
 RUN npm run build
 
 FROM node:22-alpine AS runner
